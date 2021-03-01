@@ -65,7 +65,7 @@ describe('roleMappingsManagementApp', () => {
     const { setBreadcrumbs, container, unmount, docTitle } = await mountApp('/', '/');
 
     expect(setBreadcrumbs).toHaveBeenCalledTimes(1);
-    expect(setBreadcrumbs).toHaveBeenCalledWith([{ href: `/`, text: 'Role Mappings' }]);
+    expect(setBreadcrumbs).toHaveBeenCalledWith([{ href: `/`, text: 'Role Mappings' }, { href: '/create', text: 'Create' }]);
     expect(docTitle.change).toHaveBeenCalledWith('Role Mappings');
     expect(docTitle.reset).not.toHaveBeenCalled();
     expect(container).toMatchInlineSnapshot(`

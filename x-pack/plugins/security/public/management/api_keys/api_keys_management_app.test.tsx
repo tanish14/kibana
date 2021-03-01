@@ -46,7 +46,7 @@ describe('apiKeysManagementApp', () => {
       });
 
     expect(setBreadcrumbs).toHaveBeenCalledTimes(1);
-    expect(setBreadcrumbs).toHaveBeenCalledWith([{ href: '/', text: 'API Keys' }]);
+    expect(setBreadcrumbs).toHaveBeenCalledWith([{ href: '/', text: 'API Keys' }, { href: '/create', text: 'Create' }]);
     expect(docTitle.change).toHaveBeenCalledWith('API Keys');
     expect(docTitle.reset).not.toHaveBeenCalled();
     expect(container).toMatchInlineSnapshot(`

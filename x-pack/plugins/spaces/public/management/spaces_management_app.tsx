@@ -53,7 +53,7 @@ export const spacesManagementApp = Object.freeze({
           },
         ];
 
-        chrome.docTitle.change(title);
+        coreStart.chrome.docTitle.change(getDocTitle(breadcrumbs));
 
         const SpacesGridPageWithBreadcrumbs = () => {
           setBreadcrumbs(spacesBreadcrumbs);

@@ -62,7 +62,7 @@ export const rolesManagementApp = Object.freeze({
           import('../users'),
         ]);
 
-        chrome.docTitle.change(title);
+        coreStart.chrome.docTitle.change(getDocTitle(breadcrumbs));
 
         const rolesAPIClient = new RolesAPIClient(http);
         const RolesGridPageWithBreadcrumbs = () => {

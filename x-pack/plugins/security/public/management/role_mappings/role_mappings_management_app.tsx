@@ -40,7 +40,7 @@ export const roleMappingsManagementApp = Object.freeze({
           },
         ];
 
-        coreStart.chrome.docTitle.change(title);
+        coreStart.chrome.docTitle.change(getDocTitle(breadcrumbs));
 
         const [
           [core],

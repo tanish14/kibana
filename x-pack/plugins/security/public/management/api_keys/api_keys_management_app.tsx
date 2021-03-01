@@ -43,7 +43,7 @@ export const apiKeysManagementApp = Object.freeze({
           import('./api_keys_api_client'),
         ]);
 
-        core.chrome.docTitle.change(title);
+        coreStart.chrome.docTitle.change(getDocTitle(breadcrumbs));
 
         render(
           <KibanaContextProvider services={core}>

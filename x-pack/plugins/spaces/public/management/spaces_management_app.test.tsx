@@ -77,7 +77,7 @@ describe('spacesManagementApp', () => {
     const { setBreadcrumbs, container, unmount, docTitle } = await mountApp('/', '/');
 
     expect(setBreadcrumbs).toHaveBeenCalledTimes(1);
-    expect(setBreadcrumbs).toHaveBeenCalledWith([{ href: `/`, text: 'Spaces' }]);
+    expect(setBreadcrumbs).toHaveBeenCalledWith([{ href: `/`, text: 'Spaces' }, { href: '/create', text: 'Create' }]);
     expect(docTitle.change).toHaveBeenCalledWith('Spaces');
     expect(docTitle.reset).not.toHaveBeenCalled();
     expect(container).toMatchInlineSnapshot(`

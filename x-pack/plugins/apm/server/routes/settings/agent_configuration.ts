@@ -167,7 +167,11 @@ export const agentConfigurationSearchRoute = createRoute({
 
     if (!config) {
       context.logger.debug(
+<<<<<<< HEAD
         `[Central configuration] Config was not found for ${service.name}/${service.environment}`
+=======
+        `[Central configuration] Config was not found for opbeans-java/production`
+>>>>>>> use .debug for not found agent config
       );
       throw Boom.notFound();
     }
